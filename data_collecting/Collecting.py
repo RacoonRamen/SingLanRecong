@@ -31,7 +31,7 @@ training_data = input("Please type in the training sign languange:")
 # In[17]:
 
 
-epcho = int(input("How many time to train(recommand:30):"))
+epcho = int(input("How many time to collect(recommand:30):"))
 
 def mediapipe_detection(image, model):
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB) # COLOR CONVERSION BGR 2 RGB
@@ -106,18 +106,15 @@ def extract_keypoints(results):
 
 
 # In[39]:
-
-
-# Path for exported data, numpy arrays
-DATA_PATH = os.path.join('MP_Data') 
-
-# Actions that we try to detect
+try:
+    DATA_PATH = os.path.join('MP_Data') 
+except:
+    os.mkdir('MP_Data')
+    DATA_PATH = os.path.join('MP_Data') 
 actions = np.array([training_data])
 
-# Thirty videos worth of data
 no_sequences = epcho
 
-# Videos are going to be 30 frames in length
 sequence_length = epcho
 
 
