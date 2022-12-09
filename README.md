@@ -8,3 +8,11 @@
 ##  研究方法
  ### 首先應用Mediapipe進行手部及臉部的特徵擷取，擷取的結果將是節點，這些節點分別代表著位置資訊，因此，將這些節點輸入到LSTM模型裡面進行訓練，最後可以得到辨識手語並轉為文字的模型。其中，甚至可以運用seq2seq架構下的transformer進行最終輸出文字的梳理，讓輸出的字句文法更加流暢。
 
+
+https://user-images.githubusercontent.com/75330475/206633181-c66081b1-dd8d-4c1c-8869-43a6a61ff819.mp4
+
+## 說明: 
+* Original Setences :所有辨識輸入的單詞
+* Transformer said  :文法重組後的句子 
+
+
